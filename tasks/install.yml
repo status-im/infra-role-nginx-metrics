@@ -4,6 +4,7 @@
     url: '{{ nginx_metrics_tarball_url }}'
     dest: '/tmp/{{ nginx_metrics_tarball }}'
     checksum: 'md5:{{ nginx_metrics_tarball_md5 }}'
+    mode: 0644
 
 - name: Unpack the tarball
   unarchive:
