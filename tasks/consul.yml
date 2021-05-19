@@ -7,7 +7,7 @@
       - name: '{{ nginx_metrics_service_name }}'
         tags: ['ipfs', 'cluster']
         port: '{{ nginx_metrics_listen_port }}'
-        address: '{{ ansible_local.tinc.vpn_ip }}'
+        address: '{{ ansible_local.wireguard.vpn_ip }}'
         checks:
           - id: '{{ nginx_metrics_service_name }}-status'
             name: Nginx Metrics Healthcheck
