@@ -1,7 +1,8 @@
 [Unit]
 Description="Exporting Nginx metrics to Prometheus"
 Documentation=https://github.com/nginxinc/nginx-prometheus-exporter
-Requires=nginx_exporter.socket
+Requires=nginx.service
+After=nginx.service
 
 [Service]
 User={{ nginx_metrics_service_user }}
