@@ -1,7 +1,7 @@
 ---
 # the port on which Nginx hosts stats
 nginx_metrics_nginx_status_port: 9112
-
+nginx_metrics_nginx_path:  '/etc/nginx'
 # configuration for exporter
 nginx_metrics_scrape_timeout: '5s'
 nginx_metrics_listen_host: '0.0.0.0'
