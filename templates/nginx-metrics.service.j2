@@ -11,6 +11,7 @@ ExecStart={{ nginx_metrics_bin_path }} \
             -nginx.timeout {{ nginx_metrics_scrape_timeout }} \
             -web.listen-address '{{ nginx_metrics_listen_host }}:{{ nginx_metrics_listen_port }}' \
             -nginx.scrape-uri http://localhost:{{ nginx_metrics_nginx_status_port }}
+Restart=on-failure
 
 [Install]
 WantedBy=multi-user.target
